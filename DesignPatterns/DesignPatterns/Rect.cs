@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
+    /// <summary>
+    /// zelfgemaakte variant van Rectangle, hiermee wordt ook soort en kleur bijgehouden
+    /// </summary>
     class Rect
     {
         public int X;
@@ -15,6 +18,15 @@ namespace DesignPatterns
         public char Type;
         public System.Drawing.Color Colour;
 
+        /// <summary>
+        /// constructor, maakt nieuwe instanties aan
+        /// </summary>
+        /// <param name="X">X-coördinaat van vorm</param>
+        /// <param name="Y">Y-coördinaat van vorm</param>
+        /// <param name="W">breedte van vorm</param>
+        /// <param name="H">hoogte van vorm</param>
+        /// <param name="T">soort van vorm (ellips of rechthoek)</param>
+        /// <param name="C">kleur van vorm</param>
         public Rect(int X,int Y,int W,int H, char T, System.Drawing.Color C)
         {
             this.X = X;
@@ -23,39 +35,6 @@ namespace DesignPatterns
             this.H = H;
             this.Type = T;
             this.Colour = C;
-        }
-
-        public int getX()
-        {
-            return this.X;
-        }
-        public void setX(int x)
-        {
-            this.X = x;
-        }
-        public int getY()
-        {
-            return this.Y;
-        }
-        public void setY(int y)
-        {
-            this.X = y;
-        }
-        public int getW()
-        {
-            return this.W;
-        }
-        public void setW(int w)
-        {
-            this.X = w;
-        }
-        public int getH()
-        {
-            return this.H;
-        }
-        public void setH(int h)
-        {
-            this.X = h;
         }
     }
 }
