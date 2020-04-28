@@ -20,14 +20,8 @@ namespace DesignPatterns
         bool moving = false;
         bool resizing = false;
         Pen pen;
-        /// <summary>
-        /// lijst van type Rectangle om de vormen te tekenen
-        /// </summary>
-        List<Rectangle> rectangles = new List<Rectangle>();
-        /// <summary>
-        /// lijst van type Rect om kleur en type vorm bij te houden
-        /// </summary>
-        List<Rect> shapes = new List<Rect>();
+
+        Invoker panel = new Invoker();
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +29,8 @@ namespace DesignPatterns
             //FormBorderStyle = FormBorderStyle.None;
             //WindowState = FormWindowState.Maximized; 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left;
+
+            
         }
 
         /// <summary>
@@ -124,31 +120,46 @@ namespace DesignPatterns
             if(!cursorButton.Checked)
             {
                 //als de cursor niet wordt gebruikt, wordt de vorm opgeslagen
-                rectangles.Add(rhoek);                
+                panel.InsertInRectangles(rhoek);
             }            
             if (ellipsButton.Checked)
             {
                 //als ellips is geselecteerd, wordt de vorm getekent en opgeslagen als ellips
-                g.DrawEllipse(pen, rhoek);
-                Rect shape = new Rect(x, y, w, h, 'E', pen.Color);
-                shapes.Add(shape);
+                Receiver shape = new Ellips(x, y, w, h, pen.Color);
+                Command drawCommand = new DrawCommand(shape);
+                //panel = new Invoker(drawCommand);
+                panel.SetCommand(drawCommand);
+                panel.Execute(g);
+                
+                panel.InsertInShapes(shape);
             }
             if(rhoekButton.Checked)
             {
                 //als rechthoek is geselcteerd, wordt de vorm getekent en opgeslagen als rechthoek
-                g.DrawRectangle(pen, rhoek);
-                Rect shape = new Rect(x, y, w, h, 'R', pen.Color);
-                shapes.Add(shape);
+                
+                Rect shape = new Rect(x, y, w, h, pen.Color);
+                //Rect shape = new Rect(x, y, w, h, pen.Color);
+                Command drawCommand = new DrawCommand(shape);
+                //panel = new Invoker(drawCommand);
+                panel.SetCommand(drawCommand);
+                panel.Execute(g);
+
+                panel.InsertInShapes(shape);
             }
             if (cursorButton.Checked)
             {
                 //als de cursor en een vorm zijn geselecteerd, wordt de vorm hertekent(resize)
                 if (clicks == 1 && resizing == true)
                 {
-                    int rhoekX = rectangles.ElementAt(selected).X;
-                    int rhoekY = rectangles.ElementAt(selected).Y;
-                    int rhoekW = rectangles.ElementAt(selected).Width;
-                    int rhoekH = rectangles.ElementAt(selected).Height;
+                    Rectangle selectedRect = panel.GetRectangle(selected);
+                    int rhoekX = selectedRect.X;
+                    int rhoekY = selectedRect.Y;
+                    int rhoekW = selectedRect.Width;
+                    int rhoekH = selectedRect.Height;
+                    //int rhoekX = rectangles.ElementAt(selected).X;
+                    //int rhoekY = rectangles.ElementAt(selected).Y;
+                    //int rhoekW = rectangles.ElementAt(selected).Width;
+                    //int rhoekH = rectangles.ElementAt(selected).Height;
                     int diffW = rhoekW + w;
                     int diffH = rhoekH + h;
                     resizeShape(rhoekX, rhoekY, diffW, diffH);
@@ -193,20 +204,26 @@ namespace DesignPatterns
                 if (cursorButton.Checked)
                 {
                     label1.Text = "";
+                    label2.Text = "";
                     //als een vorm geselcteerd, deze vorm verplaatsen naar geklikte bestemming
                     if (clicks == 1)
                     {
+                        Rectangle selectedRect = panel.GetRectangle(selected);
                         int rx = e.X; //uit muis halen
                         int ry = e.Y;
-                        int rw = rectangles.ElementAt(selected).Width;
-                        int rh = rectangles.ElementAt(selected).Height;
-                        
+                        //int rw = rectangles.ElementAt(selected).Width;
+                        //int rh = rectangles.ElementAt(selected).Height;
+                        int rw = selectedRect.Width;
+                        int rh = selectedRect.Height;
+
                         moveShape(rx, ry, rw, rh);
                     }
                     //kijken of er een vorm is op de plaats van mouseclick
-                    for (int i = 0; i < rectangles.Count; i++)
+                    int count = panel.GetRectangleCount();
+                    for (int i = 0; i < count; i++)
                     {
-                        if (rectangles[i].Contains(e.Location))
+                        Rectangle RectI = panel.GetRectangle(i);
+                        if (RectI.Contains(e.Location))
                         {
                             if (clicks == 1)
                             {
@@ -219,6 +236,7 @@ namespace DesignPatterns
                                 clicks++;
                                 selected = i;
                                 label1.Text = "figuur geselecteerd!";
+                                label2.Text = "klik ergens op het scherm om het figuur daarheen te verplaatsen, of sleep te rechter onderhoek om de grootte aan te passen.";
                             }
                             break;
                         }
@@ -240,23 +258,34 @@ namespace DesignPatterns
             //kopie maken van vorm op nieuwe locatie
             Rectangle draw = new Rectangle(rx, ry, rw, rh);
             //kijken of vorm een ellips of rechthoek is
-            if (shapes.ElementAt(selected).Type == 'E')
+            Receiver selectedShape = panel.GetShape(selected);
+            if (selectedShape.Type == 'E')
             {
                 //oude ellips verwijderen uit lijsten en op de nieuwe locatie toevoegen in lijsten
-                rectangles.RemoveAt(selected);
-                rectangles.Insert(selected, draw);
-                Rect shape = new Rect(rx, ry, rw, rh, 'E', shapes[selected].Colour);
-                shapes.RemoveAt(selected);
-                shapes.Insert(selected, shape);
+                Receiver shape = new Ellips(rx, ry, rw, rh, selectedShape.Colour);
+                //rectangles.RemoveAt(selected);
+                //rectangles.Insert(selected, draw);
+                //shapes.RemoveAt(selected);
+                //shapes.Insert(selected, shape);
+
+                panel.RemoveFromRectangles(selected);
+                panel.InsertInRectangles(selected, draw);                
+                panel.RemoveFromShapes(selected);
+                panel.InsertInShapes(selected, shape);
             }
             else
             {
                 //oude rechthoek verwijderen uit lijsten en op de nieuwe locatie toevoegen in lijsten
-                rectangles.RemoveAt(selected);
-                rectangles.Insert(selected, draw);
-                Rect shape = new Rect(rx, ry, rw, rh, 'R', shapes[selected].Colour);
-                shapes.RemoveAt(selected);
-                shapes.Insert(selected, shape);
+                Receiver shape = new Rect(rx, ry, rw, rh, selectedShape.Colour);
+                //rectangles.RemoveAt(selected);
+                //rectangles.Insert(selected, draw);
+                //shapes.RemoveAt(selected);
+                //shapes.Insert(selected, shape);
+
+                panel.RemoveFromRectangles(selected);
+                panel.InsertInRectangles(selected, draw);
+                panel.RemoveFromShapes(selected);
+                panel.InsertInShapes(selected, shape);
             }
             //tekenvlak opnieuw tekenen
             redrawShapes();
@@ -272,30 +301,57 @@ namespace DesignPatterns
         public void resizeShape(int rx, int ry, int rw, int rh)
         {
             Graphics g = panel1.CreateGraphics();
-            Rectangle resized = new Rectangle(rectangles.ElementAt(selected).Location, new Size(rw, rh));
-            if (shapes.ElementAt(selected).Type == 'E')
+            Rectangle resizeRect = panel.GetRectangle(selected);
+            Receiver resizeShape = panel.GetShape(selected);
+            Rectangle resized = new Rectangle(resizeRect.Location, new Size(rw, rh));
+            if (resizeShape.Type == 'E')
             {
                 //oude ellips verwijderen uit lijsten en met nieuwe afmetingen toevoegen in lijsten
-                rectangles.RemoveAt(selected);
-                rectangles.Insert(selected, resized);
-                Rect shape = new Rect(rx, ry, rw, rh, 'E', shapes[selected].Colour);
-                shapes.RemoveAt(selected);
-                shapes.Insert(selected, shape);
+                Receiver shape = new Ellips(rx, ry, rw, rh, resizeShape.Colour);
+                //rectangles.RemoveAt(selected);
+                //rectangles.Insert(selected, resized);
+                //shapes.RemoveAt(selected);
+                //shapes.Insert(selected, shape);
+                
+                panel.RemoveFromRectangles(selected);
+                panel.InsertInRectangles(selected, resized);
+                panel.RemoveFromShapes(selected);
+                panel.InsertInShapes(selected, shape);
             }
             else
             {
                 //oude rechthoek verwijderen uit lijsten en met nieuwe afmetingen toevoegen in lijsten
-                rectangles.RemoveAt(selected);
-                rectangles.Insert(selected, resized);
-                Rect shape = new Rect(rx, ry, rw, rh, 'R', shapes[selected].Colour);
-                shapes.RemoveAt(selected);
-                shapes.Insert(selected, shape);
+                Receiver shape = new Rect(rx, ry, rw, rh, resizeShape.Colour);
+                //rectangles.RemoveAt(selected);
+                //rectangles.Insert(selected, resized);
+                //shapes.RemoveAt(selected);
+                //shapes.Insert(selected, shape);
+
+                panel.RemoveFromRectangles(selected);
+                panel.InsertInRectangles(selected, resized);
+                panel.RemoveFromShapes(selected);
+                panel.InsertInShapes(selected, shape);
             }
             redrawShapes();
 
             resizing = false;
             clicks = 0;
             label1.Text = "";
+            label2.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //undo
+            Graphics g = panel1.CreateGraphics();
+            panel.Undo(g);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //redo
+            Graphics g = panel1.CreateGraphics();
+            panel.Redo(g);
         }
 
         /// <summary>
@@ -306,19 +362,16 @@ namespace DesignPatterns
             Graphics g = panel1.CreateGraphics();
             //tekenvlak leegmaken, om daarna vormen weer correct te tekenen (nieuwe plaat/afmetingen)
             g.Clear(BackColor);
-            for (int i = 0; i < rectangles.Count(); i++)
+            int count = panel.GetRectangleCount();
+            for (int i = 0; i < count; i++)
             {
-                if (shapes.ElementAt(i).Type == 'R')
-                {
-                    pen.Color = shapes.ElementAt(i).Colour;
-                    g.DrawRectangle(pen, rectangles.ElementAt(i));
-                }
-                else
-                {
-                    pen.Color = shapes.ElementAt(i).Colour;
-                    g.DrawEllipse(pen, rectangles.ElementAt(i));
-                }
+                //Receiver shape = shapes.ElementAt(i);
+                Receiver shape = panel.GetShape(i);
+                Command drawCommand = new DrawCommand(shape);
+                panel.SetCommand(drawCommand);
+                panel.redraw = true;
+                panel.Execute(g);
             }
-        }
+        }         
     }
 }
