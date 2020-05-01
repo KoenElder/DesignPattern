@@ -121,7 +121,7 @@ namespace DesignPatterns
             {
                 //als de cursor niet wordt gebruikt, wordt de vorm opgeslagen
                 panel.InsertInRectangles(rhoek);
-            }            
+            }
             if (ellipsButton.Checked)
             {
                 //als ellips is geselecteerd, wordt de vorm getekent en opgeslagen als ellips
@@ -130,8 +130,19 @@ namespace DesignPatterns
                 //panel = new Invoker(drawCommand);
                 panel.SetCommand(drawCommand);
                 panel.Execute(g);
-                
+
                 panel.InsertInShapes(shape);
+
+                int count = panel.GetRectangleCount();
+                for (int i = 0; i < count; i++)
+                {
+                    Rectangle RectI = panel.GetRectangle(i);
+                    if (RectI.Contains(rhoek.Location))
+                    {
+                        Receiver ShapeI = panel.GetShape(i);
+                        ShapeI.AddChild(shape);
+                    }
+                }
             }
             if(rhoekButton.Checked)
             {
@@ -145,9 +156,22 @@ namespace DesignPatterns
                 panel.Execute(g);
 
                 panel.InsertInShapes(shape);
+
+                int count = panel.GetRectangleCount();
+                for (int i = 0; i < count; i++)
+                {
+                    Rectangle RectI = panel.GetRectangle(i);
+                    if (RectI.Contains(rhoek.Location))
+                    {
+                        Receiver ShapeI = panel.GetShape(i);
+                        ShapeI.AddChild(shape);
+                    }
+                }
             }
             if (cursorButton.Checked)
             {
+                //rhoek is gemaakte vlak, gebruiken voor group
+
                 //als de cursor en een vorm zijn geselecteerd, wordt de vorm hertekent(resize)
                 if (clicks == 1 && resizing == true)
                 {
