@@ -170,23 +170,29 @@ namespace DesignPatterns
             }
             if (cursorButton.Checked)
             {
-                //rhoek is gemaakte vlak, gebruiken voor group
+                //---------  R E S I Z E ----------//
 
                 //als de cursor en een vorm zijn geselecteerd, wordt de vorm hertekent(resize)
                 if (clicks == 1 && resizing == true)
                 {
+                    Visitor resizeVisitor = new ResizeVisitor();
+                    Receiver selectedShape = panel.GetShape(selected);
                     Rectangle selectedRect = panel.GetRectangle(selected);
                     int rhoekX = selectedRect.X;
                     int rhoekY = selectedRect.Y;
                     int rhoekW = selectedRect.Width;
                     int rhoekH = selectedRect.Height;
-                    //int rhoekX = rectangles.ElementAt(selected).X;
-                    //int rhoekY = rectangles.ElementAt(selected).Y;
-                    //int rhoekW = rectangles.ElementAt(selected).Width;
-                    //int rhoekH = rectangles.ElementAt(selected).Height;
-                    int diffW = rhoekW + w;
-                    int diffH = rhoekH + h;
-                    resizeShape(rhoekX, rhoekY, diffW, diffH);
+                    int newW = rhoekW + w;
+                    int newH = rhoekH + h;
+                    Rectangle draw = new Rectangle(rhoekX, rhoekY, newW, newH);
+
+                    selectedShape.Accept(resizeVisitor, selected, draw, panel);
+                    redrawShapes();
+
+                    resizing = false;
+                    clicks = 0;
+                    label1.Text = "";
+                    label2.Text = "";
                 }
             }
             moving = false;
@@ -232,15 +238,17 @@ namespace DesignPatterns
                     //als een vorm geselcteerd, deze vorm verplaatsen naar geklikte bestemming
                     if (clicks == 1)
                     {
+                        Visitor moveVisitor = new MoveVisitor();
+                        Receiver selectedShape = panel.GetShape(selected);
                         Rectangle selectedRect = panel.GetRectangle(selected);
-                        int rx = e.X; //uit muis halen
-                        int ry = e.Y;
-                        //int rw = rectangles.ElementAt(selected).Width;
-                        //int rh = rectangles.ElementAt(selected).Height;
+                        int newX = e.X; //uit muis halen
+                        int newY = e.Y;
                         int rw = selectedRect.Width;
                         int rh = selectedRect.Height;
+                        Rectangle draw = new Rectangle(newX, newY, rw, rh);
 
-                        moveShape(rx, ry, rw, rh);
+                        selectedShape.Accept(moveVisitor, selected, draw, panel);
+                        redrawShapes();
                     }
                     //kijken of er een vorm is op de plaats van mouseclick
                     int count = panel.GetRectangleCount();
@@ -267,101 +275,6 @@ namespace DesignPatterns
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// verplaatst vorm naar nieuwe locatie
-        /// </summary>
-        /// <param name="rx">X-coördinaat van nieuwe locatie</param>
-        /// <param name="ry">Y-coördinaat van nieuwe locatie</param>
-        /// <param name="rw">breedte van vorm</param>
-        /// <param name="rh">hoogte van vorm</param>
-        public void moveShape(int rx, int ry, int rw, int rh)
-        {
-            Graphics g = panel1.CreateGraphics();
-            //kopie maken van vorm op nieuwe locatie
-            Rectangle draw = new Rectangle(rx, ry, rw, rh);
-            //kijken of vorm een ellips of rechthoek is
-            Receiver selectedShape = panel.GetShape(selected);
-            if (selectedShape.Type == 'E')
-            {
-                //oude ellips verwijderen uit lijsten en op de nieuwe locatie toevoegen in lijsten
-                Receiver shape = new Ellips(rx, ry, rw, rh, selectedShape.Colour);
-                //rectangles.RemoveAt(selected);
-                //rectangles.Insert(selected, draw);
-                //shapes.RemoveAt(selected);
-                //shapes.Insert(selected, shape);
-
-                panel.RemoveFromRectangles(selected);
-                panel.InsertInRectangles(selected, draw);                
-                panel.RemoveFromShapes(selected);
-                panel.InsertInShapes(selected, shape);
-            }
-            else
-            {
-                //oude rechthoek verwijderen uit lijsten en op de nieuwe locatie toevoegen in lijsten
-                Receiver shape = new Rect(rx, ry, rw, rh, selectedShape.Colour);
-                //rectangles.RemoveAt(selected);
-                //rectangles.Insert(selected, draw);
-                //shapes.RemoveAt(selected);
-                //shapes.Insert(selected, shape);
-
-                panel.RemoveFromRectangles(selected);
-                panel.InsertInRectangles(selected, draw);
-                panel.RemoveFromShapes(selected);
-                panel.InsertInShapes(selected, shape);
-            }
-            //tekenvlak opnieuw tekenen
-            redrawShapes();
-        }
-
-        /// <summary>
-        /// grootte van vorm veranderen
-        /// </summary>
-        /// <param name="rx">X-coördinaat van vorm</param>
-        /// <param name="ry">Y-coördinaat van vorm</param>
-        /// <param name="rw">nieuwe breedte van vorm</param>
-        /// <param name="rh">nieuwe hoogte van vorm</param>
-        public void resizeShape(int rx, int ry, int rw, int rh)
-        {
-            Graphics g = panel1.CreateGraphics();
-            Rectangle resizeRect = panel.GetRectangle(selected);
-            Receiver resizeShape = panel.GetShape(selected);
-            Rectangle resized = new Rectangle(resizeRect.Location, new Size(rw, rh));
-            if (resizeShape.Type == 'E')
-            {
-                //oude ellips verwijderen uit lijsten en met nieuwe afmetingen toevoegen in lijsten
-                Receiver shape = new Ellips(rx, ry, rw, rh, resizeShape.Colour);
-                //rectangles.RemoveAt(selected);
-                //rectangles.Insert(selected, resized);
-                //shapes.RemoveAt(selected);
-                //shapes.Insert(selected, shape);
-                
-                panel.RemoveFromRectangles(selected);
-                panel.InsertInRectangles(selected, resized);
-                panel.RemoveFromShapes(selected);
-                panel.InsertInShapes(selected, shape);
-            }
-            else
-            {
-                //oude rechthoek verwijderen uit lijsten en met nieuwe afmetingen toevoegen in lijsten
-                Receiver shape = new Rect(rx, ry, rw, rh, resizeShape.Colour);
-                //rectangles.RemoveAt(selected);
-                //rectangles.Insert(selected, resized);
-                //shapes.RemoveAt(selected);
-                //shapes.Insert(selected, shape);
-
-                panel.RemoveFromRectangles(selected);
-                panel.InsertInRectangles(selected, resized);
-                panel.RemoveFromShapes(selected);
-                panel.InsertInShapes(selected, shape);
-            }
-            redrawShapes();
-
-            resizing = false;
-            clicks = 0;
-            label1.Text = "";
-            label2.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)

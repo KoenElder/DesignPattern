@@ -10,7 +10,7 @@ namespace DesignPatterns
     /// <summary>
     /// zelfgemaakte variant van Rectangle, hiermee wordt ook soort en kleur bijgehouden
     /// </summary>
-    class Rect : Receiver
+    public class Rect : Receiver
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -57,6 +57,11 @@ namespace DesignPatterns
         public void AddChild(Receiver shape)
         {
             childs.Add(shape);
+        }
+
+        public void Accept(Visitor visitor, int selected, Rectangle draw, Invoker panel)
+        {
+            visitor.Visit(this, selected, draw, panel);
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace DesignPatterns
 {
-    interface Command
+    public interface Command
     {
         void Execute(Graphics g);
         Receiver GetReceiver();

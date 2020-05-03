@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace DesignPatterns
 {
-    class Invoker
+    public class Invoker
     {
         public bool redraw = false;
         private bool redo = false;

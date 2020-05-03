@@ -19,5 +19,7 @@ namespace DesignPatterns
         void Draw(Graphics g);
         Rectangle ConvertToRectangle();
         void AddChild(Receiver shape);
+
+        void Accept(Visitor visitor, int selected, Rectangle draw, Invoker panel);
     }
 }
