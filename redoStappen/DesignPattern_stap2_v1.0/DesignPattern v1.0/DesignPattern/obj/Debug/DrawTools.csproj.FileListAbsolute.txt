@@ -1,0 +1,40 @@
+C:\Users\X\Downloads\DrawTools-master\DrawTools\bin\Debug\DrawTools.exe
+C:\Users\X\Downloads\DrawTools-master\DrawTools\bin\Debug\DrawTools.pdb
+C:\Users\X\Downloads\DrawTools-master\DrawTools\bin\Debug\DocToolkit.dll
+C:\Users\X\Downloads\DrawTools-master\DrawTools\bin\Debug\DocToolkit.pdb
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.csprojAssemblyReference.cache
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.DrawArea.resources
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.FrmAbout.resources
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.MainForm.resources
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.PropertiesDialog.resources
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.Properties.Resources.resources
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.csproj.GenerateResource.cache
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.csproj.CopyComplete
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.exe
+C:\Users\X\Downloads\DrawTools-master\DrawTools\obj\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\bin\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\bin\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\bin\Debug\DocToolkit.dll
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\bin\Debug\DocToolkit.pdb
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.FrmAbout.resources
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.MainForm.resources
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.PropertiesDialog.resources
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.csproj.CopyComplete
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\Examples\DrawTools-master\DrawTools\obj\Debug\DrawTools.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.FrmAbout.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.MainForm.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\obj\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\bin\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.3\DrawTools\bin\Debug\DrawTools.pdb

@@ -1,0 +1,50 @@
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DrawTools.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DrawTools.MainForm.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DrawTools.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DesignPattern.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\obj\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\bin\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.5\DesignPattern\bin\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\bin\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\bin\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DrawTools.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DrawTools.MainForm.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DrawTools.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DesignPattern.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DrawTools.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.7\DesignPattern\obj\Debug\DrawTools.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.MainWindow.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\bin\Debug\DesignPattern.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\bin\Debug\DesignPattern.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.8\DesignPattern\obj\Debug\DesignPattern.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.MainWindow.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.pdb
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\bin\Debug\DesignPattern.exe
+D:\PROGRAMMING\DesignPattern\DesignPattern v0.9\DesignPattern\bin\Debug\DesignPattern.pdb
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\bin\Debug\DesignPattern.exe
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\bin\Debug\DesignPattern.pdb
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.csprojAssemblyReference.cache
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.DrawArea.resources
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.MainWindow.resources
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.Properties.Resources.resources
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.csproj.GenerateResource.cache
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.csproj.CoreCompileInputs.cache
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.exe
+D:\PROGRAMMING\DesignPattern\oud\stap 1\DesignPattern v0.9\DesignPattern\obj\Debug\DesignPattern.pdb
