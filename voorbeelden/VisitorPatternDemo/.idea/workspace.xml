@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="413ea92d-631a-4964-817d-7b3506bf82b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/.vs/DesignPatterns/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/.vs/DesignPatterns/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/.vs/DesignPatterns/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/.vs/DesignPatterns/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/Invoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/Invoker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/bin/Debug/DesignPatterns.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/bin/Debug/DesignPatterns.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/bin/Debug/DesignPatterns.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/bin/Debug/DesignPatterns.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/obj/Debug/DesignPatterns.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/obj/Debug/DesignPatterns.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/obj/Debug/DesignPatterns.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/obj/Debug/DesignPatterns.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/obj/Debug/DesignPatterns.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../DesignPatterns/DesignPatterns/obj/Debug/DesignPatterns.pdb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1cUVwpgA9edNOt6ois7cBIulqk1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SingletonPatternDemo" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="413ea92d-631a-4964-817d-7b3506bf82b7" name="Default Changelist" comment="" />
+      <created>1590583400157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590583400157</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1590583431593">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1590583431593" />
+  </component>
+</project>

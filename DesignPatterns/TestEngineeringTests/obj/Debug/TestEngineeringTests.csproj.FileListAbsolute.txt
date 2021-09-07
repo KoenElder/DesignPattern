@@ -1,0 +1,16 @@
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\TestEngineeringTests.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\TestEngineeringTests.pdb
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\DesignPatterns.exe
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\DesignPatterns.pdb
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\DesignPatterns.exe.config
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\obj\Debug\TestEngineeringTests.csprojAssemblyReference.cache
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\obj\Debug\TestEngineeringTests.csproj.CopyComplete
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\obj\Debug\TestEngineeringTests.dll
+C:\Users\elder\Documents\HBO-ICT\jaar 2\periode 3\DesignPattern\DesignPatterns\TestEngineeringTests\obj\Debug\TestEngineeringTests.pdb
